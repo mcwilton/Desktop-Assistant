@@ -41,13 +41,14 @@ while True:
                 pyttsx3.speak("Sorry user . Check whether google chrome is installed or not in your system. If it installed check the requirements are satisfied..!")
 
         # os.system('start chrome "www.google.com/search?q="'+site)
-    elif("bitcoin price"):
+    elif ("bitcoin price"):
         pyttsx3.speak("Request Initiated.")
         print("Request Initiated.")
         current_price = requests.get('https://api.coindesk.com/v1/bpi/currentprice.json')
         json_data = current_price.json()
         print(f"USD - ${str(json_data['bpi']['USD']['rate_float'])}")
-        pyttsx3.speak( f" The price is {str(json_data['bpi']['USD']['rate_float'])}")
+        pyttsx3.speak(f" The price is {str(json_data['bpi']['USD']['rate_float'])}")
+
 
     elif(("close" in user) or ("kill" in user) or ("exit" in user)) and (("chrome" in user)or ("browser"in user)):
         pyttsx3.speak("Request Initiated")
